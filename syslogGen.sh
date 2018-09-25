@@ -2,8 +2,8 @@
 # Path to netcat
 NC="/bin/nc"
 # Where are we sending messages from / to?
-ORIG_IP="127.0.0.1"
-DEST_IP="127.0.0.1"
+ORIG_IP="0.0.0.0"
+DEST_IP="drush.estpak.ee"
 # List of messages.
 MESSAGES=("Error Event" "Warning Event" "Info Event")
 # How long to wait in between sending messages.
@@ -45,7 +45,7 @@ do
 		# Picks a random syslog message from the list.
 		RANDOM_MESSAGE=${MESSAGES[$RANDOM % ${#MESSAGES[@]} ]}
 		PRIORITY=${PRIORITIES[$RANDOM % ${#PRIORITIES[@]} ]}
-		$NC $DEST_IP -u 514 -w 0 <<< "<$PRIORITY>`env LANG=us_US.UTF-8 date "+%b %d %H:%M:%S"` $ORIG_IP service: $RANDOM_MESSAGE"
+		$NC $DEST_IP  514 -w 0 <<< "<$PRIORITY>`env LANG=us_US.UTF-8 date "+%b %d %H:%M:%S"` $ORIG_IP service: $RANDOM_MESSAGE"
 	done
 	sleep $SLEEP_SECS
 done
