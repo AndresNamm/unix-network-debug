@@ -1,6 +1,6 @@
 # PUPROSE 
 
-The purpose of this repository is to collect different script which help to monitor network throughput in unix systems
+The purpose of this repository is to collect different scripts which help to monitor network and its throughput in unix systems
 
 # SCENARIO 1  TO RECEIVE MESSAGES
 
@@ -10,5 +10,5 @@ then execute this command on the same server
 nc -l -k -p 514
 
 on other server you can send the sample packet like this 
-nc drush.estpak.ee 514 -w 1 <<< "sstere"
+nc destination.ee 514 -w 1 <<< "sstere"
 or you could use the syslogGen.sh script to send syslog packages

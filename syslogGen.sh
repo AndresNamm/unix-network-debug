@@ -3,7 +3,7 @@
 NC="/bin/nc"
 # Where are we sending messages from / to?
 ORIG_IP="0.0.0.0"
-DEST_IP="drush.estpak.ee"
+DEST_IP=$1
 # List of messages.
 MESSAGES=("Error Event" "Warning Event" "Info Event")
 # How long to wait in between sending messages.
