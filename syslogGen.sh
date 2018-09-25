@@ -3,7 +3,7 @@
 NC="/bin/nc"
 # Where are we sending messages from / to?
 ORIG_IP="127.0.0.1"
-DEST_IP="127.0.0.11"
+DEST_IP="127.0.0.1"
 # List of messages.
 MESSAGES=("Error Event" "Warning Event" "Info Event")
 # How long to wait in between sending messages.
