@@ -1,4 +1,8 @@
-# SCENARIO 1 
+# PUPROSE 
+
+The purpose of this repository is to collect different script which help to monitor network throughput in unix systems
+
+# SCENARIO 1  TO RECEIVE MESSAGES
 
 execute tcpdump  -i team0 port 514 -A  2>/dev/null this listens on port 514 
 you can pipeline the output to grep to search for info or send the output to file for later parsing 
