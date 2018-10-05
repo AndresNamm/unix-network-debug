@@ -1,6 +1,6 @@
 # PUPROSE 
 
-The purpose of this repository is to collect different scripts which help to monitor network and its throughput in unix systems
+The purpose of this repository is to collect different examples and scripts which help to monitor network and its throughput in unix systems
 
 # SCENARIO 1  TO RECEIVE MESSAGES
 
