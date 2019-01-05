@@ -34,8 +34,6 @@ tcpdump -i any -A port 514
 
 
 
-
-
 # SCENARIO 2 - SEND MESSAGES WITH NC, LISTEN 1 ONLY INCOMING 2 ONLY OUTGOING WITH tcpdump
 
 ## INCOMING
@@ -78,19 +76,6 @@ tcpdump -n host 213.180.19.66
 ~~~
 
 
-## OUTGOING
-
-
-# SCENARIO 1  TO RECEIVE MESSAGES
-
-execute tcpdump  -i any port 514 -A  2>/dev/null this listens all the network interfaces on port 514
-you can pipeline the output to grep to search for info or send the output to file for later parsing
-then execute this command on the same server
-nc -l -k -p 514
-
-on other server you can send the sample packet like this
-nc destination.ee 514 -w 1 <<< "sstere"
-or you could use the syslogGen.sh script to send syslog packages
 
 # GENERAL GOOD TUTORIALS
 
@@ -98,3 +83,5 @@ or you could use the syslogGen.sh script to send syslog packages
 
 + [WITH EXPLANATIONS](https://hackertarget.com/tcpdump-examples/)
 + [SHORTER TUTORIAL WITH COMMANDS](https://www.rationallyparanoid.com/articles/tcpdump.html)
+
+## NC
